@@ -4,9 +4,9 @@
         return `${firstName} ${lastName}`;
     }
 
-    let noName:any;
+    
 
-    const nombre = fullName(noName,'Stark');
+    const nombre = fullName('Tony','Stark');
 
     console.log(nombre);
     

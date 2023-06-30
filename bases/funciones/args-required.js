@@ -3,7 +3,6 @@
     const fullName = (firstName, lastName) => {
         return `${firstName} ${lastName}`;
     };
-    let noName;
-    const nombre = fullName(noName, 'Stark');
+    const nombre = fullName('Tony', 'Stark');
     console.log(nombre);
 })();
