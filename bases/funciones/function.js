@@ -7,9 +7,6 @@
     const activateBatiSignal = () => {
         return 'Batiseñal';
     };
-    
-   console.log(typeof activateBatiSignal());
-
-   const heroName = returnName();
-    
+    returnName();
+    activateBatiSignal();
 })();
