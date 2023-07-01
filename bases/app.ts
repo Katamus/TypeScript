@@ -72,3 +72,5 @@ let mystique:(charles|apocalipsis);
 
 mystique = charles;
 mystique = apocalipsis;
+
+console.log(apocalipsis);

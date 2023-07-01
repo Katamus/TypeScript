@@ -7,3 +7,4 @@
     villian.forEach(v => console.log(v.toUpperCase()));
     console.log(numbers);
 })();
+//# sourceMappingURL=arrays.js.map

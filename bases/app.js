@@ -43,3 +43,5 @@ const apocalipsis = {
 let mystique;
 mystique = charles;
 mystique = apocalipsis;
+console.log(apocalipsis);
+//# sourceMappingURL=app.js.map

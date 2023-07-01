@@ -10,3 +10,4 @@
     returnName();
     activateBatiSignal();
 })();
+//# sourceMappingURL=function.js.map

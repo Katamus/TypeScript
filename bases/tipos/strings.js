@@ -5,3 +5,4 @@
     const volcanNegro = `Héro: Volcan Negro`;
     console.log(batman.toUpperCase());
 })();
+//# sourceMappingURL=strings.js.map
