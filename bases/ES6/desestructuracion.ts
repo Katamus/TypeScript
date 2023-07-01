@@ -23,7 +23,14 @@
         console.log(avengers.vision,rest);
     }
 
-    printAvenger(avengers);
+    // printAvenger(avengers);
+
+    const avengersArr: [string,boolean,number] = ['Cap. America',true,150.15];
+
+    const [capi,ironman,] = avengersArr;
+
+    console.log({ironman,capi});
+    
     
 
 })()
