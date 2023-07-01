@@ -1,34 +1,74 @@
-// Funciones Básicas
-function sumar( a:number, b:number ):number{
-  return a + b;
+type Auto = {
+  carroceria:string;
+  modelo:string;
+  antibalas:boolean;
+  pasajeros:number;
+  disparar?:()=>void;
 }
+// Objetos
+const batimovil:Auto = {
+  carroceria: "Negra",
+  modelo: "6x6",
+  antibalas: true,
+  pasajeros:4
+};
 
-const contar = ( heroes:string[] ):number => {
-  return heroes.length;
-}
-const superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
-contar(superHeroes);
-
-//Parametros por defecto
-const llamarBatman = ( llamar:boolean = false ):void => {
-  if( llamar ){
-    console.log("Batiseñal activada");
+const bumblebee:Auto = {
+  carroceria: "Amarillo con negro",
+  modelo: "4x2",
+  antibalas: true,
+  pasajeros:4,
+  disparar(){ // El metodo disparar es opcional
+    console.log("Disparando");
   }
+};
+
+type Humano = {
+  nombre:string;
+  edad: number|undefined;
+  mutante:boolean;
 }
 
-llamarBatman();
 
-// Rest?
-const unirheroes = ( ...personas:string[] ):string => {
-  return personas.join(", ");
+// Villanos debe de ser un arreglo de objetos personalizados
+const villanos:Humano[] = [{
+  nombre:"Lex Luthor",
+  edad: 54,
+  mutante:false
+},{
+  nombre: "Erik Magnus Lehnsherr",
+  edad: 49,
+  mutante: true
+},{
+  nombre: "James Logan",
+  edad: undefined,
+  mutante: true
+}];
+
+type charles = {
+  poder:string;
+  estatura:number;
 }
 
+type apocalipsis = {
+  lider: boolean,
+  miembros: string[]
+}
 
-// Tipo funcion
-const noHaceNada = ( numero:number, texto:string, booleano:boolean, arreglo:string[] ):void=> {}
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
+const charles:charles = {
+  poder:"psiquico",
+  estatura: 1.78
+};
 
-// Crear el tipo de funcion que acepte la funcion "noHaceNada"
-let noHaceNadaTampoco: ( numero:number, texto:string, booleano:boolean, arreglo:string[] ) => void;
+const apocalipsis:apocalipsis = {
+  lider:true,
+  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
+}
 
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique:(charles|apocalipsis);
 
-noHaceNadaTampoco = noHaceNada
+mystique = charles;
+mystique = apocalipsis;
