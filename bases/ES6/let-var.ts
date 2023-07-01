@@ -5,7 +5,7 @@
     // const getName = function(){};
 
     const getName = () =>{
-        console.log('viejo getName');
+        //console.log('viejo getName');
     };
     
 })();

@@ -27,9 +27,26 @@ var __rest = (this && this.__rest) || function (s, e) {
     console.log({ ironman, capi });
 })();
 (() => {
+    const ironman = {
+        name: 'Ironman',
+        weapon: 'ArmorSuit'
+    };
+    const captainAmerica = {
+        name: 'Capitan Ameroca',
+        weapon: 'Escudo'
+    };
+    const thor = {
+        name: 'Thor',
+        weapon: 'Mjolnir'
+    };
+    const avengers = [ironman, thor, captainAmerica];
+    for (const avenger of avengers) {
+        console.log(avenger);
+    }
+})();
+(() => {
     const nombre = 'Christian';
     const getName = () => {
-        console.log('viejo getName');
     };
 })();
 //# sourceMappingURL=main.js.map
