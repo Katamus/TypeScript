@@ -37,8 +37,16 @@
         getfullNameDesdeXmen() {
             console.log(super.getFullName());
         }
+        get fullName() {
+            return `${this.name} - ${this.realName}`;
+        }
+        set fullName(name) {
+            this.name = name;
+        }
     }
     const wolverine = new Xmen('Wolverine', 'Logan', true);
-    wolverine.getfullNameDesdeXmen();
+    console.log(wolverine.fullName);
+    wolverine.fullName = 'Chrisitan';
+    console.log(wolverine.name);
 })();
 //# sourceMappingURL=main.js.map
