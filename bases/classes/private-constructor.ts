@@ -26,11 +26,11 @@
     const apocalipsis3 = Apocalipsis.callApocalipsis();
     apocalipsis1.changeName();
 
-    console.log({
-        apocalipsis1,
-        apocalipsis2,
-        apocalipsis3
-    });
+    // console.log({
+    //     apocalipsis1,
+    //     apocalipsis2,
+    //     apocalipsis3
+    // });
     
 
 })();
