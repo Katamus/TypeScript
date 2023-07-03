@@ -12,11 +12,22 @@
             public realName?:string){
         }
         
+        public bio(){
+            return `${this.name} (${this.team})!!!`;
+        }
+
+        static getAvgAge(){
+            return this.avgAge;
+        }
 
     }
+
 
     const antman = new Avenger('Antman','Capitan','Scott Lang');
 
     console.log(antman);
+    console.log(antman.bio());
+    console.log(Avenger.getAvgAge());
+    
     
 })();
