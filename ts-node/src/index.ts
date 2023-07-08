@@ -1,7 +1,7 @@
 import { getPokemon } from "./generics/get-pokemon";
 
 getPokemon(4).then(
-    resp=> console.log(resp)
+    pokemon=> console.log(pokemon.sprites.front_shiny)
     
 ).catch(error => console.log(error))
 .finally(()=>{
