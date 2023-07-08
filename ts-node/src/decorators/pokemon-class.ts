@@ -35,12 +35,33 @@ function CheckValidPokemn () {
     }
 }
 
+function readonly(isWritable: boolean  = true):Function{
+    return function (target:any,propertyKey:string){
+        
+        const descriptor: PropertyDescriptor = {
+            get() {
+                console.log(this);
+                return 'Fernando';
+            },set(this, val) {
+                Object.defineProperty(this, propertyKey, {
+                    value:val,
+                    writable: !isWritable,
+                    enumerable: false
+                })
+            }
+        }
+
+        return descriptor;
+    }
+}
+
 
 
 @bloquearPrototipo
 @printToConsoleConditional(false)
 export class Pokemon {
 
+    @readonly(true)
     public publicApi:String = 'https://pokeapi.co';
 
     constructor(
