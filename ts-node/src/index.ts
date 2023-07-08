@@ -1,4 +1,6 @@
 import { genericFunction, genericFunctionArrow, printObject } from './generics/generics';
+import { Hero } from './interfaces/hero';
+import { Villain } from './interfaces/villain';
 
 // printObject(123);
 // printObject(new Date());
@@ -7,6 +9,14 @@ import { genericFunction, genericFunctionArrow, printObject } from './generics/g
 // printObject('Hola Mundo');
 const name :string = 'Christian';
 
-console.log(genericFunction(3.14618).toFixed(2));
-console.log(genericFunction(name).toUpperCase());
-console.log(genericFunctionArrow(new Date()).getDate());
+// console.log(genericFunction(3.14618).toFixed(2));
+// console.log(genericFunction(name).toUpperCase());
+// console.log(genericFunctionArrow(new Date()).getDate());
+
+const deadpool = {
+    name: 'Deadpool',
+    realName: 'Wade Winston Wilson',
+    dengerLevel:130
+}
+
+console.log(genericFunctionArrow<Villain>(deadpool).dengerLevel);
